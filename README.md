@@ -1,3 +1,36 @@
+# Documentación de Reservamos
+
+1. [Levantar el proyecto el local si se tiene docker](#2-levantar-el-proyecto-si-se-tiene-docker)
+2. [Levantar el proyecto usando virtualenv](#3-levantar-el-proyecto-usando-virtualenv)
+
+---
+
+## 1. Levantar el proyecto si se tiene docker
+
+#### Si se tiene docker instalado en la maquina se puede ejecutar con el siguiente comando:
+`docker compose up --build`
+
+#### Si se tiene docker instalado y la posibilidad de ejecutar makefiles
+`make build`
+
+---
+
+## 2. Levantar el proyecto usando virtualenv
+
+#### 1. Se tiene que crear el virtualenv con el siguiente comando
+`python3 -m venv venv`
+
+#### 2. Se habilita el virtualenv
+`source venv/bin/activate`
+
+#### 3. Se instala los paquetes necesarios
+`pip install -r requirements.txt`
+
+#### 4. Nos metemos a la carpeta reservamos y se debe de encontrar el archivo manage.py y lo ejecutamos
+`python manage.py runserver`
+
+---
+
 # Nexu Backend Coding Exercise
 Our goal is to give you a small coding challenge that gives you a chance to show off your skills while giving you an idea of some of the problems that you may encounter at Nexu. We know you're busy with life, so we hope that you can spend around 2 hours working through this exercise. We don't expect you to finish in 2 hours, so don't worry if you can't. Submit what you have along with some notes on your thoughts and how you would proceed if you had more time. Most importantly, try to have some fun with it!
 
