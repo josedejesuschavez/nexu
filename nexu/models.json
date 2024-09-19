@@ -4066,17 +4066,5 @@
         "name": "Prius",
         "average_price": 5000000,
         "brand_name": "Acura"
-    },
-    {
-        "id": 1742,
-        "name": "Prius",
-        "average_price": 500000,
-        "brand_name": "ABC"
-    },
-    {
-        "id": 1743,
-        "name": "Prius2",
-        "average_price": 500000,
-        "brand_name": "ABC"
     }
 ]

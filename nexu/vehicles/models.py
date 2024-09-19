@@ -5,6 +5,9 @@ class BrandModel(models.Model):
     name = models.CharField(max_length=255)
     average_price = models.IntegerField()
 
+    def __str__(self):
+        return self.name
+
 
 class ModelModel(models.Model):
     name = models.CharField(max_length=255)
