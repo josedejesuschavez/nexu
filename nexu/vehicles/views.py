@@ -10,14 +10,13 @@ from .application.insert_model_use_case import InsertModelUseCase
 from .application.update_average_price_by_model_id_use_case import (
     UpdateAveragePriceByModelId,
 )
-from .infrastructure.json_brands_repository import JSONBrandsRepository
-from .infrastructure.json_greater_than_criteria import JSONGreaterThanCriteria
-from .infrastructure.json_less_than_criteria import JSONLessThanCriteria
-from .infrastructure.json_models_repository import JSONModelsRepository
+from .infrastructure.sql_brands_repository import SQLBrandsRepository
+from .infrastructure.sql_greater_than_criteria import SQLGreaterThanCriteria
+from .infrastructure.sql_less_than_criteria import SQLLessThanCriteria
+from .infrastructure.sql_models_repository import SQLModelsRepository
 
-
-models_repository = JSONModelsRepository()
-brands_repository = JSONBrandsRepository()
+models_repository = SQLModelsRepository()
+brands_repository = SQLBrandsRepository()
 
 
 class BrandList(APIView):
@@ -69,10 +68,10 @@ class ModelList(APIView):
         lower = int(lower) if lower is not None else None
         use_case = GetAllModelsUseCase(
             models_repository=models_repository,
-            greater_than_criteria=JSONGreaterThanCriteria(min_price=greater),
-            less_than_criteria=JSONLessThanCriteria(max_price=lower),
+            greater_than_criteria=SQLGreaterThanCriteria(min_price=greater),
+            less_than_criteria=SQLLessThanCriteria(max_price=lower),
         )
-        result = use_case.execute(greater=greater, lower=lower)
+        result = use_case.execute(greater=str(greater), lower=str(lower))
         return Response(result, status=status.HTTP_200_OK)
 
 

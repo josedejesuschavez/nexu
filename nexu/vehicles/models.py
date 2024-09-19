@@ -1,3 +1,15 @@
-# from django.db import models
+from django.db import models
 
-# Create your models here.
+
+class BrandModel(models.Model):
+    name = models.CharField(max_length=255)
+    average_price = models.IntegerField()
+
+
+class ModelModel(models.Model):
+    name = models.CharField(max_length=255)
+    average_price = models.IntegerField()
+    brand = models.ForeignKey("BrandModel", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name

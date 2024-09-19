@@ -1,14 +1,13 @@
+from vehicles.domain.criteria import Criteria
 from vehicles.domain.models_repository import ModelsRepository
-from vehicles.infrastructure.json_greater_than_criteria import JSONGreaterThanCriteria
-from vehicles.infrastructure.json_less_than_criteria import JSONLessThanCriteria
 
 
 class GetAllModelsUseCase:
     def __init__(
         self,
         models_repository: ModelsRepository,
-        greater_than_criteria: JSONGreaterThanCriteria,
-        less_than_criteria: JSONLessThanCriteria,
+        greater_than_criteria: Criteria,
+        less_than_criteria: Criteria,
     ):
         self.models_repository = models_repository
         self.greater_than_criteria = greater_than_criteria
