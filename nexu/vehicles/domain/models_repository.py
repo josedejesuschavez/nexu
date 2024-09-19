@@ -1,14 +1,18 @@
 from abc import ABC, abstractmethod
-from typing import List
 
 from vehicles.domain.criteria import Criteria
 from vehicles.domain.model import Model
 
 
 class ModelsRepository(ABC):
-
     @abstractmethod
-    def get_all_models(self, greater: str, lower: str, greater_than_criteria: Criteria, less_than_criteria: Criteria):
+    def get_all_models(
+        self,
+        greater: str,
+        lower: str,
+        greater_than_criteria: Criteria,
+        less_than_criteria: Criteria,
+    ):
         pass
 
     @abstractmethod

@@ -16,7 +16,7 @@ You just got hired to join the *cool* engineering team at *Nexu*! The first stor
 
 #### GET /brands
 
-List all brands 
+List all brands
 ```json
 [
   {"id": 1, "nombre": "Acura", "average_price": 702109},
@@ -78,7 +78,7 @@ The average_price must be greater then 100,000.
 
 #### GET /models?greater=&lower=
 
-List all models. 
+List all models.
 If greater param is included show all models with average_price greater than the param
 If lower param is included show all models with average_price lower than the param
 ```
@@ -107,5 +107,3 @@ Please upload this repository to Github and submit to @remigioamc when complete.
 
 ## Bonus
 Deploy your application so we can test it against our frontend. Share the URL.
-
-

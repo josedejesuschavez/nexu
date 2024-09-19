@@ -5,7 +5,6 @@ from vehicles.domain.brand import Brand
 
 
 class BrandsRepository(ABC):
-
     @abstractmethod
     def get_all_brands(self) -> List[Brand]:
         pass

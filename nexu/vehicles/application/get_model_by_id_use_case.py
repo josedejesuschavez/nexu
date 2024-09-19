@@ -2,7 +2,6 @@ from vehicles.domain.models_repository import ModelsRepository
 
 
 class GetModelByIdUseCase:
-
     def __init__(self, models_repository: ModelsRepository):
         self.models_repository = models_repository
 

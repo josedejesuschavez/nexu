@@ -2,7 +2,6 @@ from vehicles.domain.brands_repository import BrandsRepository
 
 
 class GetAllBrandsUseCase:
-
     def __init__(self, brands_repository: BrandsRepository):
         self.brands_repository = brands_repository
 

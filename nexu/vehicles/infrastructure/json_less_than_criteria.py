@@ -6,4 +6,4 @@ class JSONLessThanCriteria(Criteria):
         self.max_price = max_price
 
     def filter(self, buffer):
-        return [item for item in buffer if item['average_price'] <= self.max_price]
+        return [item for item in buffer if item["average_price"] <= self.max_price]
