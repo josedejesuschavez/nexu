@@ -39,6 +39,13 @@ Ejecutar todas las pruebas unitarias
 pytest
 ```
 
+Ruta donde se encuentran los tests
+
+```bash
+vehicles.tests.test_model
+vehicles.tests.test_brand
+```
+
 ---
 
 # Nexu Backend Coding Exercise
