@@ -2,6 +2,7 @@
 
 1. [Levantar el proyecto el local si se tiene docker](#2-levantar-el-proyecto-si-se-tiene-docker)
 2. [Levantar el proyecto usando virtualenv](#3-levantar-el-proyecto-usando-virtualenv)
+3. [Ejecucion de pruebas unitarias](#4-ejecucion-de-todas-las-pruebas-unitarias)
 
 ---
 
@@ -28,6 +29,15 @@
 
 #### 4. Nos metemos a la carpeta reservamos y se debe de encontrar el archivo manage.py y lo ejecutamos
 `python manage.py runserver`
+
+---
+
+## 3. Ejecucion de todas las pruebas unitarias
+
+Ejecutar todas las pruebas unitarias
+```bash
+pytest
+```
 
 ---
 
